@@ -1,6 +1,7 @@
 <?php
     $page = explode('/',$_SERVER["PHP_SELF"]);
     $page = end($page);
+    require_once "../dbcon.php";
    
     session_start();
 
@@ -29,9 +30,11 @@
     <!--SECTION css-->
     <!-- ========================================================= -->
     <!--Notification msj-->
-    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../asstes/vendor/toastr/toastr.min.css">
+    <!--dataTable-->
+    <link rel="stylesheet" href="../asstes/vendor/data-table/media/css/dataTables.bootstrap.min.css">
     <!--Magnific popup-->
-    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="../asstes/vendor/magnific-popup/magnific-popup.css">
     <!--TEMPLATE css-->
     <!-- ========================================================= -->
     <link rel="stylesheet" href="../asstes/stylesheets/css/style.css">
@@ -174,7 +177,7 @@
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
                                 <li class="<?= $page == 'index.php' ? 'active-item' : ''; ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <li class="<?= $page == 'test.php' ? 'active-item' : ''; ?>"><a href="test.php"><i class="fa fa-home" aria-hidden="true"></i><span>test</span></a></li>
+                                <li class="<?= $page == 'students.php' ? 'active-item' : ''; ?>"><a href="students.php"><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
 
                             </ul>
                         </nav>
