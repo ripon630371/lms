@@ -2,6 +2,12 @@
 
 require_once "../dbcon.php";
 
+session_start();
+
+if(isset($_SESSION['student_login'])){
+    header('location:sign-in.php');
+}
+
 if(isset($_POST['student_register'])){
     
     $fname = $_POST['fname'];
