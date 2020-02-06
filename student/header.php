@@ -2,6 +2,11 @@
     $page = explode('/',$_SERVER["PHP_SELF"]);
     $page = end($page);
    
+    session_start();
+
+    if(!isset($_SESSION['student_login'])){
+        header('location:sign-in.php');
+    }
 
 ?>
 
@@ -144,7 +149,7 @@
                 <div class="header-separator"></div>
                 <!--Log out -->
                 <div class="header-section">
-                    <a href="pages_sign-in.html" data-toggle="tooltip" data-placement="left" title="Logout"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
+                    <a href="logout.php" data-toggle="tooltip" data-placement="left" title="Logout"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
