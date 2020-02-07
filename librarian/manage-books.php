@@ -6,7 +6,7 @@
                     <div class="leftside-content-header">
                         <ul class="breadcrumbs">
                             <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Dashboard</a></li>
-                            
+                            <li><a href="javascript:void(0)">Manage Book</a></li>
                         </ul>
                     </div>
                 </div>
