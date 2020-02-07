@@ -178,7 +178,7 @@
                                 <!--HOME-->
                                 <li class="<?= $page == 'index.php' ? 'active-item' : ''; ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
                                 <li class="<?= $page == 'students.php' ? 'active-item' : ''; ?>"><a href="students.php"><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
-                                <li class="has-child-item close-item <?= $page == 'manage-books.php' ? 'open-item' : ''; ?><?= $page == 'add-book.php' ? 'open-item' : ''; ?>">
+                                <li class="has-child-item close-item <?= $page == 'manage-books.php' || 'add-book.php' ? 'open-item' : ''; ?>">
                                     <a><i class="fa fa-book" aria-hidden="true"></i><span>Books</span> </a>
                                     <ul class="nav child-nav level-1">
                                         <li class="<?= $page == 'add-book.php' ? 'active-item' : ''; ?>"><a href="add-book.php">Add Book</a></li>
