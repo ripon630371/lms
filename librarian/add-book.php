@@ -7,14 +7,22 @@ if(isset($_POST['save_book'])){
     $book_price = $_POST['book_price'];
     $book_qty = $_POST['book_qty'];
     $available_qty = $_POST['available_qty'];
-    $libraian_username = $_POST['libraian_username'];
+    $libraian_username = $_SESSION['libraian_username'];
 
 
     $image = explode('.',$_FILES['book_image']['name']);
     $image_ext = end($image);
     $image = date('Ymdhis .').$image_ext;
+    
+    $result = mysqli_query($con,"INSERT INTO `books`(`book_name`, `book_image`, `book_author_name`, `book_purchase_date`, `book_price`, `book_qty`, `available_qty`, `libraian_username`) 
+    VALUES ('$book_name','$image','$book_author_name','$book_purchase_date','$book_price','$book_qty','$available_qty','$libraian_username')");
 
-    echo $image;
+    if($result){
+        echo "ok";
+    }else{
+        echo "No";
+    }
+
 
 }
 
@@ -82,12 +90,7 @@ if(isset($_POST['save_book'])){
                                                         <input type="number" name="available_qty" class="form-control" id="available_qty" placeholder="Available quantity">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="libraian_username" class="col-sm-4 control-label">Libraian Username</label>
-                                                    <div class="col-sm-8">
-                                                        <input type="text" name="libraian_username" class="form-control" id="libraian_username" placeholder="Libraian username">
-                                                    </div>
-                                                </div>
+                                               
 
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-4 col-sm-8">

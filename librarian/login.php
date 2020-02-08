@@ -17,6 +17,7 @@
             $row = mysqli_fetch_assoc($result);
             if( $row['password'] == $password ){
                 $_SESSION['libraian_login'] = $email; 
+                $_SESSION['libraian_username'] = $row['username']; 
                 header('location:index.php');
             }else{
                 $error = "Password invalid!";
