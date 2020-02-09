@@ -5477,3 +5477,6 @@ html.left-sidebar-top .c-hamburger span {
   color: red;
   margin-top: 5px;
 }
+.book_image{
+  width: 100% !important;
+}
