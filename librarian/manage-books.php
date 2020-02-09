@@ -48,7 +48,7 @@
                                                                 <td>
                                                                     <a href="javascript:void(0)" class="btn btn-info" data-toggle="modal" data-target="#book-<?= $row['id'];?>"><i class="fa fa-eye"></i></a>
                                                                     <a href="javascript:void(0)" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                                                    <a href="javascript:void(0)" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                                                    <a href="delete.php?bookdelete=<?= base64_encode($row['id']);?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete me!')"><i class="fa fa-trash-o"></i></a>
                                                                 </td>
                                                             </tr>
                                                         <?php 
