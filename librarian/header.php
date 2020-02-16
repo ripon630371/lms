@@ -185,6 +185,7 @@
                                         <li class="<?= $page == 'manage-books.php' ? 'active-item' : ''; ?>"><a href="manage-books.php">Manage Books</a></li>
                                     </ul>
                                 </li>
+                                <li class="<?= $page == 'issue-book.php' ? 'active-item' : ''; ?>"><a href="issue-book.php"><i class="fa fa-book" aria-hidden="true"></i><span>Issu Book</span></a></li>
                             </ul>
                         </nav>
                     </div>
