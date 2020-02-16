@@ -161,6 +161,7 @@
                                                 <label for="book_name" class="col-sm-4 control-label">Book Name</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" name="book_name" class="form-control" id="book_name " placeholder="Book Name " required value="<?= $book_info_row['book_name'];?>">
+                                                    <input type="hidden" name="id" class="form-control" id="id " placeholder="Book Name " required value="<?= $book_info_row['id'];?>">
                                                 </div>
                                             </div>
 
@@ -217,7 +218,30 @@
                 </div>
             </div>
         </div>
-        <?php 
-             }
-        ?>
+    <?php 
+
+        }
+
+
+            if(isset($_POST['update_book'])){
+                $id = $_POST['id'];
+                $book_name = $_POST['book_name'];
+                $book_author_name = $_POST['book_author_name'];
+                $book_purchase_date = $_POST['book_purchase_date'];
+                $book_price = $_POST['book_price'];
+                $book_qty = $_POST['book_qty'];
+                $available_qty = $_POST['available_qty'];
+                $libraian_username = $_SESSION['libraian_username'];
+                
+
+                $result = mysqli_query($con,"UPDATE `books` SET `book_name`='$book_name',`book_author_name`='$book_author_name',`book_purchase_date`='$book_author_name',`book_price`='$book_price',`book_qty`='$book_qty',`available_qty`='$available_qty',`libraian_username`='$libraian_username' WHERE `id` = '$id'");
+            
+                if($result){
+                    header('location: manage-books.php');
+                }
+                
+            
+            
+            }
+    ?>
 <?php  require_once "footer.php"; ?>
